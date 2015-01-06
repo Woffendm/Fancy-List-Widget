@@ -1,0 +1,17 @@
+<h1 class="title" data-bind="title"></h1>
+
+<ul>
+  <li data-foreach-entry="entries">
+    <div>
+      <span class="label">
+        <i data-bind-class="icon" data-showif="icon"></i>
+        <span data-bind="entry.label | truncate 10"></span>
+      </span>
+      <span class="value" data-bind="entry.value | truncate 30"></span>
+    </div>
+  </li>
+</ul>
+
+<p class="conditional-more-info" data-bind="conditional_more_info"></p>
+<p class="more-info" data-bind="moreinfo"></p>
+<p class="updated-at" data-bind-error="error" data-bind="updatedAtMessage"></p>
