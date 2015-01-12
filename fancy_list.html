@@ -1,6 +1,6 @@
 <h1 class="title" data-bind="title"></h1>
 
-<ul>
+<ul data-showif="entries | first">
   <li data-foreach-entry="entries">
     <div>
       <span class="label">
@@ -12,6 +12,6 @@
   </li>
 </ul>
 
-<p class="conditional-more-info" data-bind="conditional_more_info"></p>
+<p class="no-entries" data-bind="noentries" data-hideif="entries | first"></p>
 <p class="more-info" data-bind="moreinfo"></p>
 <p class="updated-at" data-bind-error="error" data-bind="updatedAtMessage"></p>
